@@ -7,12 +7,24 @@
 
   <PropertyGroup>
     <DocumentationFile>$(Configuration)\$(Platform)\$(TargetFramework)\BDModule.xml</DocumentationFile>
+    <Authors>Tomas Kouba</Authors>
+    <Company>S&amp;T CZ</Company>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Debug\**" />
     <EmbeddedResource Remove="Debug\**" />
     <None Remove="Debug\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="BDModule.psd1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="BDModule.psd1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
